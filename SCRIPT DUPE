@@ -114,7 +114,7 @@ end
 })
 
 local AE = Y.Button({
-    Text = "Anti AFK",
+    Text = "HACK tổng hợp",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/tranhoang-201207/tranhoang201207/main/HACK%20t%E1%BB%95ng%20h%E1%BB%A3p"))()
 end
