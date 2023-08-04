@@ -1,0 +1,1005 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ACN Hub - Owner: LouisDox#8849", colors)
+
+ local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "HELLO THERE!";
+    Text = "Remember Join My Discord Sever In Credit!";
+    Duration = "5";
+    Callback = NotificationBindable;
+})
+
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main Function - LouisDox#8849")
+
+
+Section:NewButton("Hide Damages", "", function()
+game:GetService("ReplicatedStorage").ReplicatedAssets.Models.DamageEffect:Destroy()
+end)
+
+Section:NewButton("Autoclick Damages", "", function()
+  while true do
+game:GetService("ReplicatedStorage").Remote.ClickerDamage:FireServer()
+   wait()
+end
+end)
+
+
+
+
+Section:NewButton("Fake High DPC - Save Data!", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 999999999999999
+end)
+
+Section:NewButton("Redeem All New Codes", "", function()
+  local args = {
+    [1] = "halfbillion"
+}
+
+game:GetService("ReplicatedStorage").Remote.RedeemCode:InvokeServer(unpack(args))
+end)
+
+
+Section:NewButton("Anti AFK", "", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
+end)
+
+
+Section:NewLabel("Performance Boost")
+
+
+Section:NewButton("FPS Boost", "", function()
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+end)
+
+ Section:NewButton("Turn Off Music", "", function()
+game:GetService("ReplicatedStorage").Music:Destroy()
+end)
+
+
+   Section:NewButton("Auto Claim Daily Ticket", "", function()
+  while true do
+game:GetService("ReplicatedStorage").Remote.ClaimTicket:FireServer()
+ wait()
+ end
+ end)
+
+ Section:NewButton("Auto Daily Spin", "", function()
+  while true do
+game:GetService("ReplicatedStorage").Remote.DailySpin:FireServer()
+  wait()
+end
+end)
+
+
+Section:NewToggle("Turn Off Egg Animation", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui["EggOpenGui"].Enabled = false
+  else
+   game.Players.LocalPlayer.PlayerGui["EggOpenGui"].Enabled = true
+end
+ end)
+
+
+Section:NewToggle("Disable Speed Mount", "", function(state)
+    if state then
+ game:GetService("Players").manhkkgg.PlayerScripts.StarterPlayerScriptsFolder.SpeedHandler.Disabled = true
+   else
+ game:GetService("Players").manhkkgg.PlayerScripts.StarterPlayerScriptsFolder.SpeedHandler.Disabled = false
+   end
+end)
+
+
+local Tab = Window:NewTab("Egg")
+local Section = Tab:NewSection("Select Egg Below:")
+
+
+Section:NewButton("NomeK Egg", "", function()
+ while true do
+  local args = {
+    [1] = workspace.Worlds.DBZ.GokuEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+end
+end)
+
+Section:NewButton("Ninja Egg", "", function()
+ while true do
+local args = {
+    [1] = workspace.Worlds.Naruto.NarutoEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+       
+ Section:NewButton("JoJo Egg", "", function() 
+  while true do
+local args = {
+    [1] = workspace.Worlds.Jojo.JojoEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+end
+end)
+
+
+ Section:NewButton("One Piece Egg", "", function() 
+  while true do
+local args = {
+    [1] = workspace.Worlds.OnePiece.OnePieceEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("MHA Egg", "", function() 
+  while true do
+local args = {
+    [1] = workspace.Worlds.MHA.MHAEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("AOT Egg", "", function() 
+  while true do
+ local args = {
+    [1] = workspace.Worlds.AOT.AOTEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Demon Slayer Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.DemonSlayer.DemonEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Tokyo Ghoul Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.TokyoGhoul.GhoulEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("HxH Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.HxH.HxHEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("S.A.O Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.SAO.SAOEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Bleach Egg", "", function() 
+  while true do
+ local args = {
+    [1] = workspace.Worlds.Bleach.BleachEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Cursed High Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.JJK.JJKEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("XYZ Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.OPM.OPMEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("7DS Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds["7DS"]["7DSEgg"],
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("Fate Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.Fate.FateEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Black Clover Egg", "", function() 
+  while true do
+ local args = {
+    [1] = workspace.Worlds.BlackClover.BCEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("FMA Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.FMA.FMAEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Slime Egg", "", function() 
+  while true do
+  local args = {
+    [1] = workspace.Worlds.Slime.SlimeEgg,
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Remote.OpenEgg:InvokeServer(unpack(args))
+
+end
+end)
+
+Section:NewLabel("Max Open Select:")
+
+ Section:NewButton("Max Nomek Egg", "", function() 
+  while true do
+  local args = {
+    [1] = "GokuEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+end
+end)
+
+
+ Section:NewButton("Max Ninja Egg", "", function() 
+  while true do
+local args = {
+    [1] = "NarutoEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("Max JoJo Egg", "", function() 
+  while true do
+local args = {
+    [1] = "JojoEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max One Piece Egg", "", function() 
+  while true do
+local args = {
+    [1] = "OnePieceEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+ Section:NewButton("Max MHA Egg", "", function() 
+  while true do
+local args = {
+    [1] = "MHAEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max AOT Egg", "", function() 
+  while true do
+local args = {
+    [1] = "AOTEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max Demon Slayer Egg", "", function() 
+  while true do
+local args = {
+    [1] = "DemonEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max Tokyo Ghoul Egg", "", function() 
+  while true do
+local args = {
+    [1] = "GhoulEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max HxH Egg", "", function() 
+  while true do
+local args = {
+    [1] = "HxHEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max S.A.O Egg", "", function() 
+  while true do
+local args = {
+    [1] = "SAOEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max Bleach Egg", "", function() 
+  while true do
+local args = {
+    [1] = "BleachEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max Cursed High Egg", "", function() 
+  while true do
+local args = {
+    [1] = "JJKEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max XYZ Egg", "", function() 
+  while true do
+local args = {
+    [1] = "OPMEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max 7DS Egg", "", function() 
+  while true do
+local args = {
+    [1] = "7DSEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max Fate Egg", "", function() 
+  while true do
+local args = {
+    [1] = "FateEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+
+ Section:NewButton("Max Black Clover Egg", "", function() 
+  while true do
+local args = {
+    [1] = "BCEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+ Section:NewButton("Max FMA Egg", "", function() 
+  while true do
+local args = {
+    [1] = "FMAEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+
+ Section:NewButton("Max Slime Egg", "", function() 
+  while true do
+local args = {
+    [1] = "SlimeEgg"
+}
+
+game:GetService("ReplicatedStorage").Remote.AttemptMultiOpen:FireServer(unpack(args))
+
+end
+end)
+
+
+
+
+local Tab = Window:NewTab("Teleport")
+local Section = Tab:NewSection("Teleport although you didn't buy it!")
+
+
+Section:NewButton("IMPORTANT!", "", function()
+local function callback(Text)
+end
+ 
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "IMPORTANT";
+    Text = "TP TWICE TO LOAD THE MAP! IT'S NOT BUG OR GLITCH!";
+    Duration = "5";
+    Callback = NotificationBindable;
+})
+
+end)
+
+Section:NewButton("Teleport To Time Trial", "", function()
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3808.0615234375, -186.7504119873, 915.35986328125)
+end)
+
+Section:NewDropdown("Teleport Island", "Click!", {"Super Island", "Ninja Island", "JoJo Island","One Piece Island","Hero Island","Titan Island","Slayer Island","Ghoul Island","Chimera Island","S.A.O Island","Bleach Island","Cursed High Island","OPM Island","7DS Island","Fate Island","Black Clover Island","Full Metal Island","Slime Island"}, function(currentOption)
+    if currentOption == "Super Island" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2380.1025390625, -184.72698974609, 442.10290527344)
+elseif currentOption == "Ninja Island" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-91.999984741211, -183.43934631348, 2606.9384765625)
+ elseif currentOption == "JoJo Island" then
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.4149813652039, -184.07151794434, -2400.9677734375)
+ elseif currentOption == "One Piece Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1711.2517089844, -182.84812927246, 297.7444152832)
+elseif currentOption == "Hero Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1987.421875, -185.02198791504, 2040.4187011719)
+elseif currentOption == "Titan Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-713.44055175781, -183.3331451416, 546.03869628906)
+elseif currentOption == "Slayer Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3057.1469726563, -183.77653503418, -1030.7222900391)
+elseif currentOption == "Ghoul Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1922.6407470703, -183.15563964844, -1576.8055419922)
+elseif currentOption == "Chimera Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1674.5874023438, -182.5531463623, 2279.2055664063)
+elseif currentOption == "S.A.O Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(331.12310791016, -183.03811645508, -516.00537109375)
+elseif currentOption == "Bleach Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2834.3696289063, -184.04399108887, -3636.3435058594)
+elseif currentOption == "Cursed High Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1795.4147949219, -184.17771911621, -2400.9677734375)
+elseif currentOption == "OPM Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1089.6594238281, -183.33317565918, 4300.138671875)
+elseif currentOption == "7DS Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4280.3598632813, -183.43934631348, 546.03857421875)
+elseif currentOption == "Fate Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4883.1733398438, -185.02198791504, -2353.4909667969)
+elseif currentOption == "Black Clover Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+elseif currentOption == "Full Metal Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3867.31640625, -184.07151794434, -3277.8449707031)
+elseif currentOption == "Slime Island" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4881.1796875, -183.11988830566, 3775.201171875)
+end
+end)
+
+Section:NewLabel("Defense Mode")
+ Section:NewButton("Open Defense Mode - Without TP", "", function()
+  
+ wait(2)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+ wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+  wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+  wait(2)
+ local args = {
+    [1] = workspace.Worlds.BlackClover.TitanSummon.Trigger
+}
+
+game:GetService("ReplicatedStorage").Remote.SummonTitan:FireServer(unpack(args))
+end)
+
+Section:NewDropdown("Teleport Defense Place", "Click!", {"Defense Place - Crazy Town", "Defense Place - Walled City","Defense Place - Cursed High","Defense Place - Lucky Kingdom","Defense Mode - Inside Lucky Kingdom"}, function(currentOption)
+    if currentOption == "Defense Place - Crazy Town" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(66.888954162598, -181.36033630371, -2310.8334960938)
+elseif currentOption == "Defense Place - Walled City" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-753.02502441406, -180.10060119629, 632.80249023438)
+elseif currentOption == "Defense Place - Cursed High" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1907.1020507812, -181.05656433105, -2379.5922851562)
+elseif currentOption == "Defense Place - Lucky Kingdom" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160.58981323242, -172.67663574219, -4083.3830566406)
+elseif currentOption == "Defense Mode - Inside Lucky Kingdom" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6284.2309570313, -194.07704162598, 949.49182128906)
+
+end
+end)
+
+
+Section:NewLabel("Misc")
+
+Section:NewToggle("Join Raid Available Now!", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui.MainGui["RaidTransport"].Visible = true
+  else
+   game.Players.LocalPlayer.PlayerGui.MainGui["RaidTransport"].Visible = false
+end
+ end)
+ 
+
+Section:NewToggle("Open Travel Gui", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui.MainGui["Travel"].Visible = true
+  else
+   game.Players.LocalPlayer.PlayerGui.MainGui["Travel"].Visible = false
+end
+ end)
+
+Section:NewToggle("Open TimeTrial Gui", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui.MainGui["TowerTransport"].Visible = true
+  else
+   game.Players.LocalPlayer.PlayerGui.MainGui["TowerTransport"].Visible = false
+end
+ end)
+
+Section:NewToggle("Open TimeTrial Shop Gui", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui.MainGui["TimeTrialShop"].Visible = true
+  else
+   game.Players.LocalPlayer.PlayerGui.MainGui["TimeTrialShop"].Visible = false
+end
+ end)
+
+Section:NewToggle("Open Merchant Gui", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui.MainGui["Merchant"].Visible = true
+  else
+   game.Players.LocalPlayer.PlayerGui.MainGui["Merchant"].Visible = false
+end
+ end)
+
+local Tab = Window:NewTab("Auto")
+local Section = Tab:NewSection("Auto Functions")
+
+ Section:NewButton("Use Yen Boost", "", function()
+  local args = {
+    [1] = "YenBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+  end)
+
+ Section:NewButton("Use XP Boost", "", function()
+  local args = {
+    [1] = "XpBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use DMG Boost", "", function()
+   local args = {
+    [1] = "DmgBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Luck Boost", "", function()
+  local args = {
+    [1] = "LuckBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Shiny Boost", "", function()
+  local args = {
+    [1] = "ShinyBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super_Yen Boost", "", function()
+local args = {
+    [1] = "SuperYenBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super_DMG Boost", "", function()
+  local args = {
+    [1] = "SuperDMGBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super Luck Boost", "", function()
+  local args = {
+    [1] = "SuperLuckBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+
+local Tab = Window:NewTab("LocalPlayer")
+local Section = Tab:NewSection("LocalPlayer")
+Section:NewTextBox("TP To Player:", "Type in a player's username to tp to them!", function(v)
+               game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[v].Character.HumanoidRootPart.CFrame 
+            end)
+
+
+Section:NewSlider("Walkspeed", "", 200, 18, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+Section:NewSlider("JumpPower", "", 200, 18, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+  Section:NewLabel("Mounts Changer")
+
+Section:NewDropdown("Select Mount:", "Click!", {"Super Mount", "Shuriken","Bizare Tank","Sand Pile","Cloud","Titan Shift","Metal Beast","Ghoul Rock","Skateboard","Tome Of Knowledge","Bat Wings","Fatality","Telekinesis","Magic Pillow","Stallion","Ghost - Halloween","Broom","Living Armor","Slime Wings"}, function(currentOption)
+    if currentOption == "Super Mount" then
+   local args = {
+    [1] = "DBZ"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Shuriken" then
+  local args = {
+    [1] = "Naruto"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Bizare Tank" then
+   local args = {
+    [1] = "Jojo"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Sand Pile" then
+  local args = {
+    [1] = "OnePiece"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Cloud" then
+  local args = {
+    [1] = "MHA"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Titan Shift" then
+  local args = {
+    [1] = "AOT"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Metal Beast" then
+  local args = {
+    [1] = "DemonSlayer"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Ghoul Rock" then
+  local args = {
+    [1] = "TokyoGhoul"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Skateboard" then
+  local args = {
+    [1] = "HxH"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Tome Of Knowledge" then
+  local args = {
+    [1] = "SAO"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Bat Wings" then
+   local args = {
+    [1] = "Bleach"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Fatality" then
+  local args = {
+    [1] = "JJK"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Telekinesis" then
+   local args = {
+    [1] = "OPM"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Magic Pillow" then
+  local args = {
+    [1] = "7DS"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Stallion" then
+  local args = {
+    [1] = "Fate"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Ghost - Halloween" then
+   local args = {
+    [1] = "Halloween"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Broom" then
+  local args = {
+    [1] = "BlackClover"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+
+elseif currentOption == "Living Armor" then
+  local args = {
+    [1] = "FMA"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+
+elseif currentOption == "Slime Wings" then
+ local args = {
+    [1] = "Slime"
+}
+
+game:GetService("ReplicatedStorage").Remote.EquipMount:FireServer(unpack(args))
+end
+end)
+
+
+
+local Tab = Window:NewTab("Misc")
+local Section = Tab:NewSection("Famous Hub")
+
+
+Section:NewButton("ZerO Hub - For Auto Defense", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+end)
+
+Section:NewButton("Shrawu Hub - Auto Skip Last Quest", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NewbieRobloxScript/Shrawru/main/NguyenVanBen"))()
+end)
+
+Section:NewButton("KJ Hub - For Farming + Trials", "", function()
+loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua"))();
+end)
+
+Section:NewButton("SECRET FUNCTION....DO NOT CLICK!", "im warning u!", function()
+  local args = {
+    [1] = "i'm gay :)",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end)
+
+
+local Tab = Window:NewTab("Credit")
+local Section = Tab:NewSection("Credit Functions")
+
+Section:NewButton("Discord Sever Invite", "", function()
+setclipboard("discord.gg/j2CPKUXyB")
+toclipboard("discord.gg/j2CPKUXyB")
+end)
+
+Section:NewKeybind("Hide GUI", "KeybindInfo", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Owner : LouisDox#8849
+
