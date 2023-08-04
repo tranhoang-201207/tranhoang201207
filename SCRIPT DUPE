@@ -64,9 +64,9 @@ getgenv().TextField = Y.TextField({
 while task.wait() do
     if Type then
         A:SetText(Type)
-    end
-end
-local Z= X.New({
+
+local X = Material.Load()
+local Z = X.New({
     Title = "Menu"
 })
 local G = Z.Button({
