@@ -4,15 +4,11 @@ local X = Material.Load({
     Title = "SCRIPT DUPE",
     Style = 3,
     SizeX = 500,
-    SizeY = 350,
+    SizeY = 250,
     Theme = "Dark",
     ColorOverrides = {
         MainFrame = Color3.fromRGB(35,35,35)
     }
-})
-
-local Y = X.New({
-    Title = "Main"
 })
 
 local A = Y.Button({
