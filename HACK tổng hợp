@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("ACN Hub - Owner: LouisDox#8849", colors)
+local Window = Library.CreateLib("Script tổng hợp", colors)
 
  local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
@@ -9,8 +9,20 @@ NotificationBindable.OnInvoke = callback
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Main Function - LouisDox#8849")
 
-Section:NewButton("Fake High DPC - Save Data!", "", function()
-game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 999999999999999
+Section:NewButton("Fake DPC", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+end)
+
+Section:NewButton("Fake DROP", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Drop.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+end)
+
+Section:NewButton("Fake Time", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Time.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+end)
+
+Section:NewButton("Fake Luck", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Luck.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 end)
 
 Section:NewButton("Anti AFK", "", function()
@@ -157,20 +169,3 @@ local Section = Tab:NewSection("Credit Functions")
 Section:NewKeybind("Hide GUI", "KeybindInfo", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---Owner : LouisDox#8849
-
