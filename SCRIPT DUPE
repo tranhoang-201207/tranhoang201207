@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - tobias020108back.",
+    Title = "SCRIPT DUPE",
     Style = 3,
     SizeX = 500,
     SizeY = 350,
@@ -112,6 +112,14 @@ for i, e in pairs(l:GetChildren()) do
 end
 end
 })
+
+local AE = Y.Button({
+    Text = "Anti AFK",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tranhoang-201207/tranhoang201207/main/HACK%20t%E1%BB%95ng%20h%E1%BB%A3p"))()
+end
+})
+
 getgenv().TextField = Y.TextField({
     Text = "Status",
     Type = "Default"
