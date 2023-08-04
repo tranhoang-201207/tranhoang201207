@@ -64,7 +64,8 @@ getgenv().TextField = Y.TextField({
 while task.wait() do
     if Type then
         A:SetText(Type)
-
+    end
+end
 Y.Button({
     Text = "FAKE DPC",
     Callback = function()
