@@ -66,22 +66,24 @@ while task.wait() do
         A:SetText(Type)
     end
 end
-
-local G = Y.Button({
+local Z= X.New({
+    Title = "Menu"
+})
+local G = Z.Button({
     Text = "Fake DPC",
     Callback = function()
 game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 999999999999999
 end
 })
 
-local F = Y.Button({
+local F = Z.Button({
     Text = "ANTI AFK",
     Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
 end
 })
 
-local H = Y.Button({
+local H = Z.Button({
     Text = "FPS boots",
     Callback = function()
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
@@ -124,7 +126,7 @@ end
 end
 })
 
-local I = Y.Button({
+local I = Z.Button({
     Text = "Fake DPC",
     Callback = function()
 game:GetService("ReplicatedStorage").Music:Destroy()
