@@ -4,7 +4,7 @@ local X = Material.Load({
     Title = "SCRIPT DUPE",
     Style = 3,
     SizeX = 500,
-    SizeY = 250,
+    SizeY = 350,
     Theme = "Dark",
     ColorOverrides = {
         MainFrame = Color3.fromRGB(35,35,35)
@@ -16,7 +16,7 @@ local Y = X.New({
 })
 
 local A = Y.Button({
-    Text = "Chọn Dạng Dataloss",
+    Text = "Dạng Dataloss",
     Callback = function()
         if Type == "Start Dataloss" then
                     local args = {
@@ -46,7 +46,7 @@ local A = Y.Button({
 })
 
 local D = Y.Dropdown({
-    Text = "Dạng Dataloss",
+    Text = "Chọn dạng Dataloss",
     Callback = function(Value)
         getgenv().Type = Value
     end,
@@ -66,18 +66,24 @@ while task.wait() do
         A:SetText(Type)
     end
 end
-Section:NewButton("Fake High DPC - Save Data!", "", function()
+
+local G = Y.Button({
+    Text = "Fake DPC",
+    Callback = function()
 game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 999999999999999
-end)
-Section:NewButton("Anti AFK", "", function()
+end
+})
+
+local F = Y.Button({
+    Text = "ANTI AFK",
+    Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
-end)
+end
+})
 
-
-Section:NewLabel("Performance Boost")
-
-
-Section:NewButton("FPS Boost", "", function()
+local H = Y.Button({
+    Text = "FPS boots",
+    Callback = function()
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
 local g = game
 local w = g.Workspace
@@ -115,8 +121,12 @@ for i, e in pairs(l:GetChildren()) do
         e.Enabled = false
     end
 end
-end)
+end
+})
 
- Section:NewButton("Turn Off Music", "", function()
+local I = Y.Button({
+    Text = "Fake DPC",
+    Callback = function()
 game:GetService("ReplicatedStorage").Music:Destroy()
-end)
+end
+})
