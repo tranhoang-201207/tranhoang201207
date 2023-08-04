@@ -1,0 +1,176 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ACN Hub - Owner: LouisDox#8849", colors)
+
+ local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main Function - LouisDox#8849")
+
+Section:NewButton("Fake High DPC - Save Data!", "", function()
+game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 999999999999999
+end)
+
+Section:NewButton("Anti AFK", "", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
+end)
+
+Section:NewButton("FPS Boost", "", function()
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+end)
+
+ Section:NewButton("Turn Off Music", "", function()
+game:GetService("ReplicatedStorage").Music:Destroy()
+end)
+
+   Section:NewButton("Auto Claim Daily Ticket", "", function()
+  while true do
+game:GetService("ReplicatedStorage").Remote.ClaimTicket:FireServer()
+ wait()
+ end
+ end)
+
+ Section:NewButton("Auto Daily Spin", "", function()
+  while true do
+game:GetService("ReplicatedStorage").Remote.DailySpin:FireServer()
+  wait()
+end
+end)
+
+
+Section:NewToggle("Turn Off Egg Animation", "", function(state)
+  if state then
+   game.Players.LocalPlayer.PlayerGui["EggOpenGui"].Enabled = false
+  else
+   game.Players.LocalPlayer.PlayerGui["EggOpenGui"].Enabled = true
+end
+ end)
+
+local Tab = Window:NewTab("Auto")
+local Section = Tab:NewSection("Auto Functions")
+
+ Section:NewButton("Use Shiny Boost", "", function()
+  local args = {
+    [1] = "ShinyBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super_Yen Boost", "", function()
+local args = {
+    [1] = "SuperYenBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super_DMG Boost", "", function()
+  local args = {
+    [1] = "SuperDMGBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+ Section:NewButton("Use Super Luck Boost", "", function()
+  local args = {
+    [1] = "SuperLuckBoost"
+}
+
+game:GetService("ReplicatedStorage").Remote.UseItem:FireServer(unpack(args))
+end)
+
+
+local Tab = Window:NewTab("LocalPlayer")
+local Section = Tab:NewSection("LocalPlayer")
+Section:NewTextBox("TP To Player:", "Type in a player's username to tp to them!", function(v)
+               game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[v].Character.HumanoidRootPart.CFrame 
+            end)
+
+
+Section:NewSlider("Walkspeed", "", 200, 18, function(s) -- 1000 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+Section:NewSlider("JumpPower", "", 200, 18, function(s) -- 1000 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Tab = Window:NewTab("Misc")
+local Section = Tab:NewSection("Famous Hub")
+
+
+Section:NewButton("ZerO Hub - For Auto Defense", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+end)
+
+Section:NewButton("YUTO hub", "", function()
+repeat wait() until game:IsLoaded() loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
+end)
+
+Section:NewButton("DUPE", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/AFS-Dataloss-GUI.lua"))();
+end)
+
+local Tab = Window:NewTab("Credit")
+local Section = Tab:NewSection("Credit Functions")
+
+Section:NewKeybind("Hide GUI", "KeybindInfo", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Owner : LouisDox#8849
+
