@@ -14,15 +14,14 @@ game:GetService("ReplicatedStorage").Multipliers.Damage.Value = 9999999999999999
 end)
 
 Section:NewButton("Fake DROPS", "", function()
-game:GetService("ReplicatedStorage").Multipliers.Drops.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-end)
+game:GetService("ReplicatedStorage").Multipliers.Drops.Value = 10000
 
 Section:NewButton("Fake Time", "", function()
-game:GetService("ReplicatedStorage").Multipliers.Time.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+game:GetService("ReplicatedStorage").Multipliers.Time.Value = 1000
 end)
 
 Section:NewButton("Fake Luck", "", function()
-game:GetService("ReplicatedStorage").Multipliers.Luck.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+game:GetService("ReplicatedStorage").Multipliers.Luck.Value = 1000
 end)
 
 Section:NewButton("Anti AFK", "", function()
