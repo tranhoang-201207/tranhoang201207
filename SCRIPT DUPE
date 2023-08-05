@@ -59,7 +59,7 @@ local D = Y.Dropdown({
 local AE = Y.Button({
     Text = "Anti AFK",
     Callback = function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpaceGT/Anti-AFK/master/Anti-AFK.ahk"))()
 end
 })
 
