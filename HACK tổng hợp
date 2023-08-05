@@ -25,7 +25,7 @@ game:GetService("ReplicatedStorage").Multipliers.Luck.Value = 1000
 end)
 
 Section:NewButton("Anti AFK", "", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/9QCyuc2p"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpaceGT/Anti-AFK/master/Anti-AFK.ahk"))()
 end)
 
 Section:NewButton("FPS Boost", "", function()
